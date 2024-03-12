@@ -21,18 +21,16 @@ const Detalle = () => {
   return (
     <>
       <Menubar />
-      <div className="container mt-5">
-        <div className="card mb-3 estilos">
-          <div className="row g-0">
+      <div>
+        <div>
+          <div>
+            
             <div className="col-md-6">
-              <img
-                src={pizzaDetail.img}
-                className="img-fluid estilos rounded-start"
-                alt={pizzaDetail.name}
-              />
+              <img src={pizzaDetail.img}/>
             </div>
+
             <div className="col-md-6">
-              <div className="card-body">
+              <div>
                 <h5 className="card-title text-capitalize">
                   {pizzaDetail.name}
                 </h5>

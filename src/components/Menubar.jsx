@@ -36,6 +36,19 @@ return (
         {/* <NavLink className={`text-white ${setActiveClass}`} to="/Home" style={{ marginRight: '10px' }} >Home</NavLink>
         <NavLink className={`text-white ${setActiveClass}`} to="/Pokemones">Pokemones</NavLink>
           */}
+
+
+           <Link
+            to="/carrito"
+            className="logo-nombre mx-1 mb-0"
+          ><img
+          src="/carrito.png"
+          width="50"
+          height="50"
+          className="d-inline-block align-top"
+          alt="Pizzas mamma mía"
+        /></Link>
+
       <h4 className="mb-0">
           {""} Total: ${(total)}
             </h4>
