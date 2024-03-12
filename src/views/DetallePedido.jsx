@@ -16,47 +16,34 @@ const DetallePedido = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="carrito p-5">
-        <div className="detalles bg-light w-75 m-auto p-5">
+      <Menubar />
+      <div >
+        <div>
           <h5>Detalles del pedido:</h5>
-          <div className="p3 bg-white">
+          <div >
             {carrito.map((producto, i) => (
               <div
                 key={i}
                 className="d-flex justify-content-between py-2"
               >
-                <div className="d-flex justify-content-between align-items-center">
+                <div >
                   <img
                     src={producto.img}
                     width="50"
                     alt=""
                   />
-                  <h6 className="mb-0 text-capitalize p-2">{producto.name}</h6>
+                  <h6 >{producto.name}</h6>
                 </div>
 
-                <div className="d-flex justify-content-end align-items-center">
-                  <h6 className="mb-0 p-2 text-success">
-                    ${formatNumber(producto.price * producto.count)}
+                <div >
+                  <h6 >
+                    ${(producto.price * producto.count)}
                   </h6>
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => decrement(i)}
-                  >
-                    -
-                  </button>
-                  <b className="mx-2">{producto.count}</b>
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => increment(i)}
-                  >
-                    +
-                  </button>
-                </div>
+                  </div>
               </div>
             ))}
-            <h2 className="my-4">Total: ${formatNumber(total)}</h2>
-            <button className="btn btn-success" onClick={formPago}>Ir a Pagar</button>
+            <h2 >Total: ${(total)}</h2>
+            <button>Ir a Pagar</button>
           </div>
         </div>
       </div>

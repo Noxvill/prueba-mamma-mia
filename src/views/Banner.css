@@ -1,0 +1,10 @@
+.banner{
+
+display: flex;
+background-image: 'https://barodastore.com/my-assets/image/innerbanner1.jpg' ;
+flex-direction: column;
+margin-top: 100px;
+height: 30vh;
+width: auto;
+
+}

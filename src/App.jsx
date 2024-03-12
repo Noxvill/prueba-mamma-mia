@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom";
 import DetallePizza from "./views/DetallePizza"
 import NotFound from './views/NotFound'
-import Home from './components/home'
+import Home from './components/Home'
 import DetallePedido from './views/DetallePedido'
 
 function App() {

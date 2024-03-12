@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../components/Card";
 import Menubar from "./Menubar"
 import PizzasList from "./Pizzaslist";
 import Banner from "../views/Banner";
