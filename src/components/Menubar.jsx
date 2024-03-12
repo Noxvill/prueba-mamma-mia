@@ -1,28 +1,41 @@
+import { NavLink } from "react-router-dom";
 import { Navbar } from "react-bootstrap"
-import { Link} from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import './Menubar.css'
+import { Link } from "react-router-dom";
 
 
-const Menubar = () =>{
+export default function Menubar() {
+const setActiveClass = ({ isActive }) => (isActive ? "active" : undefined);
 
-    return(
 
-<>
-      <Navbar bg="danger" data-bs-theme="Danger" expand="lg" fixed="top">
+
+return (
+<div>
+<Navbar  expand="lg" fixed="top" style={{ height: '80px', backgroundColor:'rgb(37, 150, 190)'}}>
         <Container>
-        
-          {/* <Navbar.Brand href="" className="text-light"><Link to="Home">home</Link></Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="" className="text-light"><Link to="Contacto">Contacto</Link></Nav.Link>
-            <Nav.Link href="" className="text-light"><Link to="/">Happy Cake</Link></Nav.Link>
-          </Nav> */}
+        <Navbar.Brand>
+          <img
+            src="/pokemon-go.svg"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="Pokemon Go Logo"
+          />Pizzería Mamma mía!
+        </Navbar.Brand>
+  
+
+        <Nav className="me-auto" style={{ marginLeft: '80%'}}>
+      
+        <NavLink className={`text-white ${setActiveClass}`} to="/Home" style={{ marginRight: '10px' }} >Home</NavLink>
+        <NavLink className={`text-white ${setActiveClass}`} to="/Pokemones">Pokemones</NavLink>
+         
+      
+        </Nav>
         </Container>
       </Navbar>
-</>
 
-    )
-
+      </div>
+);
 }
-
-export default Menubar
